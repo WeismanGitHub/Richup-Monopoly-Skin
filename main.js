@@ -11,5 +11,13 @@
 
 (function() {
     'use strict';
-    console.log('test')
+    document.addEventListener('DOMNodeInserted', (event) => {
+        console.log(event.target.nodeValue)
+        //event.target.replaceChildren("<div>test</div>")
+        // document.getElementsByClassName("wm46CW8f");
+    }, false);
+
+    /* for (let i = 0; i < propertyNames.length; i++) {
+        propertyNames[i].innerHTML = 'test'
+    } */
 })();
