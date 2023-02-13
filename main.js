@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Makes richup.io look like regular Monopoly.
 // @author       Liz Weisman
-// @match        https://richup.io/room/*
+// @match        https://richup.io/*
 // ==/UserScript==
 
 (function() {
