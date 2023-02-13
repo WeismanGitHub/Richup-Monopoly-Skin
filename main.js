@@ -34,11 +34,10 @@
         "New York": "Boardwalk",
     }
 
-
     function changePropertyNames(event) {
-        const properties = document.getElementsByClassName('wm46CW8f')
+        const property =  document.querySelector('.wm46CW8f')
 
-        if (!properties.length) {
+        if (!property) {
             return
         }
 
@@ -52,6 +51,19 @@
             
             fakePropertyElement.parentNode.replaceChild(realPropertyElement, fakePropertyElement);
         }
+
+        document.addEventListener('DOMNodeInserted', (event) => {
+            const fakePropertyElement = document.querySelector('.NaF9Aau7');
+
+            if (!fakePropertyElement) {
+                return
+            }
+
+            const realPropertyElement = document.createElement('p');
+            realPropertyElement.innerHTML = `<div>${realPropertyNames[fakePropertyElement.innerText]}</div>`;
+            
+            fakePropertyElement.parentNode.replaceChild(realPropertyElement, fakePropertyElement);
+        })
     }
 
     document.addEventListener('DOMNodeInserted', changePropertyNames);
