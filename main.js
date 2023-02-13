@@ -3,7 +3,6 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Makes richup.io look like regular Monopoly.
-// @author       Liz Weisman
 // @match        https://richup.io/*
 // ==/UserScript==
 
