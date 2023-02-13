@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Richup Monoply Skin
+// @name         Richup.io Monopoly Skin
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Makes richup.io look like regular Monopoly.

@@ -1,6 +1,6 @@
 <div align="center">
   
-  ## Richup Monopoly Skin
+  ## Richup.io Monopoly Skin
 
   ### [Richup.io](https://richup.io/)
 
