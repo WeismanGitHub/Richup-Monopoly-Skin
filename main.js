@@ -34,25 +34,25 @@
         "New York": "Boardwalk",
     }
 
-    let updatedProperties = false
 
-    document.addEventListener('DOMNodeInserted', (event) => {
+    function changePropertyNames(event) {
         const properties = document.getElementsByClassName('wm46CW8f')
 
-        if (!properties.length || updatedProperties) {
+        if (!properties.length) {
             return
         }
 
-        updatedProperties = true
+        document.removeEventListener('DOMNodeInserted', changePropertyNames)
 
         for (let i = 0; i < 22; i++) {
             const fakePropertyElement = document.querySelector('.wm46CW8f');
 
-            console.log(fakePropertyElement.innerText)
             const realPropertyElement = document.createElement('p');
             realPropertyElement.innerHTML = `<div>${realPropertyNames[fakePropertyElement.innerText]}</div>`;
             
             fakePropertyElement.parentNode.replaceChild(realPropertyElement, fakePropertyElement);
         }
-    });
+    }
+
+    document.addEventListener('DOMNodeInserted', changePropertyNames);
 })();
